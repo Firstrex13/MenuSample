@@ -233,6 +233,8 @@ GameObject:
   - component: {fileID: 39475299}
   - component: {fileID: 39475298}
   - component: {fileID: 39475297}
+  - component: {fileID: 39475300}
+  - component: {fileID: 39475301}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -303,7 +305,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 39475298}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 39475300}
+        m_TargetAssemblyTypeName: PushButtonFeedback, Assembly-CSharp
+        m_MethodName: ChangeScale
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 39475301}
+        m_TargetAssemblyTypeName: PushButtonCollor, Assembly-CSharp
+        m_MethodName: ChangeColor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &39475298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -342,6 +368,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 39475295}
   m_CullTransparentMesh: 1
+--- !u!114 &39475300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39475295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fcfaebf24c9a13479ff4ea2bea1b8ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scaleSpeed: 20
+--- !u!114 &39475301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39475295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e61033e5b7841104d84d45de2dca8616, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _changeColorSpeed: 15
 --- !u!1 &74483659
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,6 +439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fcfaebf24c9a13479ff4ea2bea1b8ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _scaleSpeed: 10
 --- !u!1 &117767227
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,6 +588,8 @@ GameObject:
   - component: {fileID: 171172077}
   - component: {fileID: 171172076}
   - component: {fileID: 171172075}
+  - component: {fileID: 171172078}
+  - component: {fileID: 171172079}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -551,7 +606,7 @@ RectTransform:
   m_GameObject: {fileID: 171172073}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5.4320183, y: 5.4320183, z: 5.4320183}
+  m_LocalScale: {x: 5.4999995, y: 5.4999995, z: 5.4999995}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 580880652}
@@ -606,9 +661,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 858042814}
-        m_TargetAssemblyTypeName: StarterGame, Assembly-CSharp
-        m_MethodName: StartGame
+      - m_Target: {fileID: 171172078}
+        m_TargetAssemblyTypeName: PushButtonScale, Assembly-CSharp
+        m_MethodName: ChangeScale
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 171172079}
+        m_TargetAssemblyTypeName: PushButtonCollor, Assembly-CSharp
+        m_MethodName: ChangeColor
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -656,6 +723,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 171172073}
   m_CullTransparentMesh: 1
+--- !u!114 &171172078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171172073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fcfaebf24c9a13479ff4ea2bea1b8ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scaleSpeed: 20
+--- !u!114 &171172079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171172073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e61033e5b7841104d84d45de2dca8616, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _changeColorSpeed: 15
 --- !u!1 &203591625
 GameObject:
   m_ObjectHideFlags: 0
@@ -1078,51 +1171,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &858042813
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 858042815}
-  - component: {fileID: 858042814}
-  m_Layer: 0
-  m_Name: MenuManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &858042814
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 858042813}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94457745696fb2047b2a26285f97a9bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _menu: {fileID: 74483661}
---- !u!4 &858042815
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 858042813}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 901.1968, y: 701.92896, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1072411814
 GameObject:
   m_ObjectHideFlags: 0
@@ -1350,6 +1398,8 @@ GameObject:
   - component: {fileID: 2043296204}
   - component: {fileID: 2043296203}
   - component: {fileID: 2043296202}
+  - component: {fileID: 2043296205}
+  - component: {fileID: 2043296206}
   m_Layer: 5
   m_Name: Button (2)
   m_TagString: Untagged
@@ -1366,7 +1416,7 @@ RectTransform:
   m_GameObject: {fileID: 2043296200}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5.31, y: 5.31, z: 5.31}
+  m_LocalScale: {x: 5.4999995, y: 5.4999995, z: 5.4999995}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 117767228}
@@ -1420,7 +1470,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2043296203}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2043296205}
+        m_TargetAssemblyTypeName: PushButtonFeedback, Assembly-CSharp
+        m_MethodName: ChangeScale
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2043296206}
+        m_TargetAssemblyTypeName: PushButtonCollor, Assembly-CSharp
+        m_MethodName: ChangeColor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2043296203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1459,6 +1533,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043296200}
   m_CullTransparentMesh: 1
+--- !u!114 &2043296205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043296200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fcfaebf24c9a13479ff4ea2bea1b8ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scaleSpeed: 20
+--- !u!114 &2043296206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043296200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e61033e5b7841104d84d45de2dca8616, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _changeColorSpeed: 15
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1467,4 +1567,3 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 1072411817}
   - {fileID: 74483660}
-  - {fileID: 858042815}
