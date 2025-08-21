@@ -424,7 +424,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sound: {fileID: 893895129}
-  _mixerGroup: {fileID: -8370340541527042302, guid: d89b03eaf48db324495accd816828fa7, type: 2}
 --- !u!1 &74483659
 GameObject:
   m_ObjectHideFlags: 0
@@ -906,7 +905,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sound: {fileID: 839831678}
-  _mixerGroup: {fileID: -8370340541527042302, guid: d89b03eaf48db324495accd816828fa7, type: 2}
 --- !u!1 &199266486
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,6 +915,7 @@ GameObject:
   m_Component:
   - component: {fileID: 199266487}
   - component: {fileID: 199266488}
+  - component: {fileID: 199266489}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -940,11 +939,11 @@ RectTransform:
   - {fileID: 260236702}
   - {fileID: 1998327698}
   - {fileID: 1440886095}
-  m_Father: {fileID: 1188469162}
+  m_Father: {fileID: 802992128}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -326, y: -494.00006}
+  m_AnchoredPosition: {x: -325.99997, y: -493.99994}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &199266488
@@ -998,8 +997,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1188469163}
-        m_TargetAssemblyTypeName: Music, Assembly-CSharp
+      - m_Target: {fileID: 199266489}
+        m_TargetAssemblyTypeName: MusicVolume, Assembly-CSharp
         m_MethodName: ChangeVolume
         m_Mode: 1
         m_Arguments:
@@ -1010,6 +1009,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &199266489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199266486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 370066f975021e04997568e3a8dd2630, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _volume: {fileID: 802992130}
+  _mixerGroup: {fileID: 2282955581340899393, guid: d89b03eaf48db324495accd816828fa7, type: 2}
 --- !u!1 &203591625
 GameObject:
   m_ObjectHideFlags: 0
@@ -1847,6 +1860,7 @@ GameObject:
   m_Component:
   - component: {fileID: 743660771}
   - component: {fileID: 743660773}
+  - component: {fileID: 743660774}
   m_Layer: 5
   m_Name: Toggle
   m_TagString: Untagged
@@ -1868,7 +1882,7 @@ RectTransform:
   m_Children:
   - {fileID: 1567137984}
   - {fileID: 387373926}
-  m_Father: {fileID: 1188469162}
+  m_Father: {fileID: 802992128}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -1922,8 +1936,8 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1188469163}
-        m_TargetAssemblyTypeName: Music, Assembly-CSharp
+      - m_Target: {fileID: 743660774}
+        m_TargetAssemblyTypeName: MusicToggle, Assembly-CSharp
         m_MethodName: ToggleMusic
         m_Mode: 1
         m_Arguments:
@@ -1935,6 +1949,20 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   m_IsOn: 0
+--- !u!114 &743660774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743660770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4279212392582294080dfe0b9673349b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _volume: {fileID: 802992130}
+  _mixerGroup: {fileID: 2282955581340899393, guid: d89b03eaf48db324495accd816828fa7, type: 2}
 --- !u!1 &802992127
 GameObject:
   m_ObjectHideFlags: 0
@@ -1945,6 +1973,7 @@ GameObject:
   m_Component:
   - component: {fileID: 802992128}
   - component: {fileID: 802992129}
+  - component: {fileID: 802992130}
   m_Layer: 0
   m_Name: Music
   m_TagString: Untagged
@@ -1965,7 +1994,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1188469162}
+  - {fileID: 199266487}
+  - {fileID: 743660771}
   m_Father: {fileID: 8229115}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &802992129
@@ -2065,6 +2095,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &802992130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802992127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df833fa97556ba445a603bbff9f253ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &839831676
 GameObject:
   m_ObjectHideFlags: 0
@@ -2644,7 +2686,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1105803451}
-  - component: {fileID: 1105803452}
   m_Layer: 5
   m_Name: EffectsSettings
   m_TagString: Untagged
@@ -2671,69 +2712,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1105803452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1105803450}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74d95565cf2c9f546ac2c1105816d7f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _mixerGroup: {fileID: -8370340541527042302, guid: d89b03eaf48db324495accd816828fa7, type: 2}
-  _volumeSlider: {fileID: 0}
---- !u!1 &1188469161
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1188469162}
-  - component: {fileID: 1188469163}
-  m_Layer: 0
-  m_Name: MusicSettings
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1188469162
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1188469161}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 743660771}
-  - {fileID: 199266487}
-  m_Father: {fileID: 802992128}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1188469163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1188469161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4279212392582294080dfe0b9673349b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _mixerGroup: {fileID: 2282955581340899393, guid: d89b03eaf48db324495accd816828fa7, type: 2}
-  _toggle: {fileID: 743660773}
-  _slider: {fileID: 199266488}
 --- !u!1 &1357241624
 GameObject:
   m_ObjectHideFlags: 0
@@ -3213,7 +3191,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mixerGroup: {fileID: -8370340541527042302, guid: d89b03eaf48db324495accd816828fa7, type: 2}
-  _volumeSlider: {fileID: 1657922521}
 --- !u!114 &1657922521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3682,7 +3659,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sound: {fileID: 1935816009}
-  _mixerGroup: {fileID: -8370340541527042302, guid: d89b03eaf48db324495accd816828fa7, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
